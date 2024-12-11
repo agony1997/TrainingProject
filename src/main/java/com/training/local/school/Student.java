@@ -8,6 +8,7 @@ public class Student {
     String name;
     int english;
     int art;
+    static int pass = 60;
 
     public Student() {
         Scanner scanner = new Scanner(System.in);
@@ -20,6 +21,7 @@ public class Student {
         this.english = scanner.nextInt();
         System.out.println("Enter art score");
         this.art = scanner.nextInt();
+
         scanner.close();
     }
 
@@ -46,6 +48,7 @@ public class Student {
         System.out.println("Art:"+art);
         System.out.println("TopScore:"+getTop());
         System.out.println("AverageScore:"+getAverage());
+        System.out.println(getAverage()>pass ? "pass" : "fail");
     }
 
     public void getRank(){
@@ -68,6 +71,7 @@ public class Student {
                 rank="E";
                 break;
         }
+        System.out.println(rank);
     }
 
 }
